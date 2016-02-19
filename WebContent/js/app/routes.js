@@ -17,16 +17,16 @@ angular.module('app')
                     contact,
                     socialProfiles;
 
-                home            = 'templates/states/home';
-                education       = 'templates/states/education';
-                experience      = 'templates/states/experience';
-                skills          = 'templates/states/skills';
-                projects        = 'templates/states/projects';
-                other           = 'templates/states/other';
-                resume          = 'templates/states/resume';
-                aboutMe         = 'templates/states/about-me';
-                contact         = 'templates/states/contact';
-                socialProfiles  = 'templates/states/social-profiles';
+                    home            = 'templates/states/home/';
+                    education       = 'templates/states/education/';
+                    experience      = 'templates/states/experience/';
+                    skills          = 'templates/states/skills/';
+                    projects        = 'templates/states/projects/';
+                    other           = 'templates/states/other/';
+                    resume          = 'templates/states/resume/';
+                    aboutMe         = 'templates/states/about-me/';
+                    contact         = 'templates/states/contact/';
+                    socialProfiles  = 'templates/states/social-profiles/';
 
 
                 $urlRouterProvider.otherwise('/home');

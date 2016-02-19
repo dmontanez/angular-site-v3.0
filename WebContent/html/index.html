@@ -27,22 +27,22 @@
         <!-- Controllers -->
         <!-- <script src="../js/controllers/INSERT"></script> -->
 
+        <!-- Directives -->
+        <script src="../js/directives/navigation.js"></script>
+        
         <!-- Custom Theme CSS -->
-        <!-- <script src="../css/style.css"></script> -->
+        <link rel="stylesheet" href="../css/style.css">
 
     </head>
     <body ng-app='app'>
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-            <ul>
-              <li>Home</li>
-            </ul>
-          </div>
-        </nav>
-
+        
         <div class="container">
-            <div ui-view></div>
+            <!-- Page Header -->
+            <!-- Navigation Header -->
+            <navigation></navigation>
+            
+            <!-- Inject Page Content Here -->
+            <div class="content" ui-view></div>
         </div>
 
     </body>
