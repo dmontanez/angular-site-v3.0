@@ -1,24 +1,27 @@
 <!doctype html>
 <html>
     <head>
-        <title>Angular Site Template | 1.4.7</title>
-
-        <!-- Angular 1.4.7 & UI-Router -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+        
+        <meta charset="UTF-8">
+        
+        <title>GetToKnowDaniel</title>
 
         <!-- JQuery 2.2.0 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+        <script src="../assets/jquery/jquery-v2.2.0.js"></script>
+        
+        <!-- Angular 1.4.7 & UI-Router -->
+        <script src="../assets/angular/angular-v1.5.js"></script>
+        <script src="../assets/angular/angular-ui-router-v0.2.18.js"></script>
 
         <!-- Bootstrap -->
-        <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min-v3.3.6.css">
 
             <!-- Optional theme -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-theme.min-v3.3.6.css">
 
             <!-- Latest compiled and minified JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            <script src="../assets/bootstrap/js/bootstrap.min-v3.3.6.js"></script>
 
         <!-- Angular App -->
         <script src="../js/app/app.js"></script>
@@ -29,6 +32,7 @@
 
         <!-- Directives -->
         <script src="../js/directives/navigation.js"></script>
+        <script src="../js/directives/page-header.js"></script>
         
         <!-- Custom Theme CSS -->
         <link rel="stylesheet" href="../css/style.css">
@@ -36,13 +40,16 @@
     </head>
     <body ng-app='app'>
         
-        <div class="container">
+        <div class="container-fluid full-width">
+            
             <!-- Page Header -->
+            <header class="full-width"></header>
+            
             <!-- Navigation Header -->
-            <navigation></navigation>
+            <navigation class="full-width"></navigation>
             
             <!-- Inject Page Content Here -->
-            <div class="content" ui-view></div>
+            <div  class="full-width" ui-view></div>
         </div>
 
     </body>
