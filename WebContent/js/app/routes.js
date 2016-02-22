@@ -15,7 +15,8 @@ angular.module('app')
                     resume,
                     aboutMe,
                     contact,
-                    socialProfiles;
+                    socialProfiles,
+                    carousel;
 
                     home            = 'templates/states/home/';
                     education       = 'templates/states/education/';
@@ -27,9 +28,10 @@ angular.module('app')
                     aboutMe         = 'templates/states/about-me/';
                     contact         = 'templates/states/contact/';
                     socialProfiles  = 'templates/states/social-profiles/';
+                    carousel        = 'templates/reusable/carousel/';
 
 
-                $urlRouterProvider.otherwise('/home');
+                //$urlRouterProvider.otherwise('/home');
 
                 $stateProvider
                     .state('home', {
@@ -66,5 +68,13 @@ angular.module('app')
                     })
                     .state('social-profiles', {
                         url: '/social-profiles'
+                    })
+                    .state('carousel', {
+                        url: '/carousel',
+                        views: {
+                            '': {
+                                templateUrl: carousel + 'index.html'
+                            }
+                        }
                     });
 }]);
