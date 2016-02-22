@@ -1,0 +1,13 @@
+<section>
+    <div class="panel-heading">
+        <img ng-src={{elem.images[2]}} height="100" />
+        <img ng-src={{elem.images[1]}} height="100" class="pull-right" style="text-align:left" />
+        <h4 calss="panel-title">{{elem.name}}</h4>
+        <h5>{{elem.degree}}, {{elem.major}}</h5>
+        <h5 ng-show="elem.minor.length">{{elem.minor}}</h5>
+        <h6>{{elem.start | date}} - {{elem.end | date}}</h6>
+    </div>
+    <div class="panel-body" id="content-panel-body">
+        <center><em ng-repeat="course in elem.courses"><small>{{course}}</small> - </em></center>
+    </div>
+</section>

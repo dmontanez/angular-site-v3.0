@@ -16,7 +16,8 @@ angular.module('app')
                     aboutMe,
                     contact,
                     socialProfiles,
-                    carousel;
+                    carousel,
+                    carouselPart;
 
                     home            = 'templates/states/home/';
                     education       = 'templates/states/education/';
@@ -29,6 +30,7 @@ angular.module('app')
                     contact         = 'templates/states/contact/';
                     socialProfiles  = 'templates/states/social-profiles/';
                     carousel        = 'templates/reusable/carousel/';
+                    carouselPart    = 'templates/reusable/carousel/partials/'
 
 
                 //$urlRouterProvider.otherwise('/home');
@@ -43,7 +45,16 @@ angular.module('app')
                         }
                     })
                     .state('education', {
-                        url: '/education'
+                        url: '/education',
+                        views: {
+                            '': {
+                                templateUrl: education + 'index.html',
+                                controller: 'educationCtrl'
+                            },
+                            'panel-template@education': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
                     })
                     .state('experience', {
                         url: '/experience'
@@ -73,7 +84,8 @@ angular.module('app')
                         url: '/carousel',
                         views: {
                             '': {
-                                templateUrl: carousel + 'index.html'
+                                template: '<carousel></carousel>',
+                                controller: 'carouselCtrl'
                             }
                         }
                     });
