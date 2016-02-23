@@ -17,20 +17,22 @@ angular.module('app')
                     contact,
                     socialProfiles,
                     carousel,
-                    carouselPart;
+                    carouselPart,
+                    _carouselTemplate;
 
-                    home            = 'templates/states/home/';
-                    education       = 'templates/states/education/';
-                    experience      = 'templates/states/experience/';
-                    skills          = 'templates/states/skills/';
-                    projects        = 'templates/states/projects/';
-                    other           = 'templates/states/other/';
-                    resume          = 'templates/states/resume/';
-                    aboutMe         = 'templates/states/about-me/';
-                    contact         = 'templates/states/contact/';
-                    socialProfiles  = 'templates/states/social-profiles/';
-                    carousel        = 'templates/reusable/carousel/';
-                    carouselPart    = 'templates/reusable/carousel/partials/'
+                    home                = 'templates/states/home/';
+                    education           = 'templates/states/education/';
+                    experience          = 'templates/states/experience/';
+                    skills              = 'templates/states/skills/';
+                    projects            = 'templates/states/projects/';
+                    other               = 'templates/states/other/';
+                    resume              = 'templates/states/resume/';
+                    aboutMe             = 'templates/states/about-me/';
+                    contact             = 'templates/states/contact/';
+                    socialProfiles      = 'templates/states/social-profiles/';
+                    carousel            = 'templates/reusable/carousel/';
+                    carouselPart        = 'templates/reusable/carousel/partials/';
+                    _carouselTemplate   = '<carousel></carousel>';
 
 
                 //$urlRouterProvider.otherwise('/home');
@@ -48,8 +50,10 @@ angular.module('app')
                         url: '/education',
                         views: {
                             '': {
-                                templateUrl: education + 'index.html',
-                                controller: 'educationCtrl'
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
                             },
                             'panel-template@education': {
                                 templateUrl: carouselPart + 'ed-panel/index.html'
@@ -57,35 +61,114 @@ angular.module('app')
                         }
                     })
                     .state('experience', {
-                        url: '/experience'
-                    })
-                    .state('skills', {
-                        url: '/skills'
-                    })
-                    .state('projects', {
-                        url: '/projects'
-                    })
-                    .state('other', {
-                        url: '/other'
-                    })
-                    .state('resume', {
-                        url: '/resume'
-                    })
-                    .state('about-me', {
-                        url: '/about-me'
-                    })
-                    .state('contact', {
-                        url: '/contact'
-                    })
-                    .state('social-profiles', {
-                        url: '/social-profiles'
-                    })
-                    .state('carousel', {
-                        url: '/carousel',
+                        url: '/experience',
                         views: {
                             '': {
-                                template: '<carousel></carousel>',
-                                controller: 'carouselCtrl'
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = companies;
+                                }
+                            },
+                            'panel-template@experience': {
+                                templateUrl: carouselPart + 'ex-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('skills', {
+                        url: '/skills',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@skills': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('projects', {
+                        url: '/projects',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@projects': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('other', {
+                        url: '/other',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@other': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('resume', {
+                        url: '/resume',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@resume': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('about-me', {
+                        url: '/about-me',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@about-me': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('contact', {
+                        url: '/contact',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@education': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
+                            }
+                        }
+                    })
+                    .state('social-profiles', {
+                        url: '/social-profiles',
+                        views: {
+                            '': {
+                                template: _carouselTemplate,
+                                controller: function($scope) {
+                                    $scope.data = schools;
+                                }
+                            },
+                            'panel-template@social-profiles': {
+                                templateUrl: carouselPart + 'ed-panel/index.html'
                             }
                         }
                     });
