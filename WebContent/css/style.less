@@ -3,10 +3,19 @@
     padding-bottom: 5px;
 }
 
+html {
+    overflow: hidden;    
+}
+
+.page-container {
+    background-color: white;
+}
+
 .page-header {
     height: 50px;
     padding: 0;
     margin: 0;
+    background-color: white;
 }
 
 .full-width {
@@ -44,4 +53,31 @@
     -webkit-box-shadow: -8px 8px 4px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: -8px 8px 4px 0px rgba(0,0,0,0.5);
     box-shadow: -8px 8px 4px 0px rgba(0,0,0,0.5);
+}
+/* State Change Transitions */
+.slideup {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -999;
+    overflow-x: hidden;
+}
+.slideup.ng-enter,
+.slideup.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slideup.ng-enter {
+    top: 100%;
+}
+.slideup.ng-enter-active {
+    top: 120px;
+}
+.slideup.ng-leave {
+    top: 120px;
+}
+.slideup.ng-leave-active {
+    top: -100%;
 }

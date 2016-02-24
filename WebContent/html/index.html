@@ -12,6 +12,7 @@
         <!-- Angular 1.4.7 & UI-Router -->
         <script src="../assets/angular/angular-v1.5.js"></script>
         <script src="../assets/angular/angular-ui-router-v0.2.18.js"></script>
+        <script src="../assets/angular/angular-animate-v1.5.js"></script>
 
         <!-- Bootstrap -->
             <!-- Latest compiled and minified CSS -->
@@ -43,7 +44,7 @@
     </head>
     <body ng-app='app'>
         
-        <div class="container-fluid full-width">
+        <div class="container-fluid full-width page-container">
             
             <!-- Page Header -->
             <header class="full-width"></header>
@@ -52,7 +53,7 @@
             <navigation class="full-width"></navigation>
             
             <!-- Inject Page Content Here -->
-            <div  class="full-width" ui-view></div>
+            <div class="full-width slideup" ui-view></div>
         </div>
 
     </body>
