@@ -1,3 +1,17 @@
+.carousel-indicators {
+  bottom: -40px;
+}
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  background-color: #dfdfe0;
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.carousel-indicators .active {
+  width: 20px;
+  height: 20px;
+  background-color: #ffff99;
+}
 .comp-logo {
   height: 100px;
   padding-bottom: 5px;
@@ -46,29 +60,97 @@ html {
   box-shadow: -8px 8px 4px 0px rgba(0, 0, 0, 0.5);
 }
 /* State Change Transitions */
-.slideup {
+.state-slideup,
+.state-slidedown,
+.state-slide {
   position: absolute;
   top: 120px;
   left: 0;
   right: 0;
   height: 100%;
   z-index: -999;
-  overflow-x: hidden;
 }
-.slideup.ng-enter,
-.slideup.ng-leave {
+.state-slideup.ng-enter,
+.state-slideup.ng-leave {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.slideup.ng-enter {
+.state-slideup.ng-enter {
   top: 100%;
 }
-.slideup.ng-enter-active {
+.state-slideup.ng-enter-active {
   top: 120px;
 }
-.slideup.ng-leave {
+.state-slideup.ng-leave {
   top: 120px;
 }
-.slideup.ng-leave-active {
+.state-slideup.ng-leave-active {
   top: -100%;
+}
+.state-slide.ng-enter,
+.state-slide.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.state-slide.ng-enter {
+  left: 100%;
+}
+.state-slide.ng-enter-active {
+  left: 0;
+}
+.state-slide.ng-leave {
+  left: 0;
+}
+.state-slide.ng-leave-active {
+  left: -100%;
+}
+.state-slidedown.ng-enter,
+.state-slidedown.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.state-slidedown.ng-enter {
+  top: -100%;
+}
+.state-slidedown.ng-enter-active {
+  top: 120px;
+}
+.state-slidedown.ng-leave {
+  top: 120px;
+}
+.state-slidedown.ng-leave-active {
+  top: 100%;
+}
+.rotate {
+  -webkit-animation-duration: 1s;
+}
+.ng-leave.rotate {
+  -webkit-animation-name: rotate-leave;
+}
+.ng-enter.rotate {
+  -webkit-animation-name: rotate-enter;
+}
+@-webkit-keyframes rotate-leave {
+  0% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotate-enter {
+  0% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(-360deg);
+    opacity: 1;
+  }
 }

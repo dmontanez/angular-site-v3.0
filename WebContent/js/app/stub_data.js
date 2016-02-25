@@ -99,3 +99,99 @@ var companies = [
             ]
         }
     ];
+
+var skills = [
+        {
+            level: 'Proficient',
+            items: [
+                {
+                    name: 'AngularJS',
+                    num: '-'
+                },{
+			     name: 'Bootstrap',
+                    num: '-'
+                },{
+			     name: 'jQuery',
+                    num: '-'
+                },{
+			     name: 'SQL',
+                    num: 2
+                },{
+			        name: 'HTML',
+                    num: '-'
+                },{
+			        name: 'CSS',
+                    num: '-'
+                },
+		      ]
+        },
+        {
+            level: 'Moderately Proficient',
+            items: [
+                {
+                    name: 'Java',
+                    num: 4
+                },{
+			     name: 'ADT',
+                    num: 3
+                },{
+			     name: 'Eclipse',
+                    num: 2
+                },{
+			        name: 'XML',
+                    num: '-'
+                }
+            ]
+        },
+        {
+            level: 'Prior Experience',
+            items: [
+                {
+                    name: 'C++',
+                    num: 2
+                },{
+			        name: 'C#',
+                    num: '-'
+                },{
+			        name: 'PHP',
+                    num: '-'
+                },{
+			        name: 'R',
+                    num: '-'
+                }
+            ]
+        },
+        {
+            level: 'Currently Learning',
+            items: [
+                {
+			     name: 'Python',
+                    num: '-'
+                },{
+			     name: 'Ruby on Rails',
+                    num: '-'
+                }
+            ]
+        },
+        {
+            level: 'Others',
+            items: [
+                {
+                    name: 'Software Engineering',
+                    num: 7
+                },{
+			        name: 'Software Development',
+                    num: 6
+                },{
+			        name: 'Analysis',
+                    num: 6
+                },{
+			        name: 'Program Management',
+                    num: 3
+                }
+            ]
+        },
+        {
+            // Place holder for the Open Badges window.
+        }
+    ];

@@ -1,0 +1,23 @@
+<section ng-hide="{{$index}} === 5">
+    <div class="panel-heading">
+        <h4 class="panel-title">{{elem.level}}</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in elem.items">
+                <span class="badge">{{item.num}}</span>
+                <em ><small>{{item.name}}</small></em>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section ng-show="{{$index}} === 5">
+        <div class="panel-heading">
+            <h4 class="panel-title">Open Badges</h4>
+        </div>
+        <div class="panel-body">
+            <h5><b>Code School</b></h5>
+            <iframe frameborder="0" scrolling="yes" src="https://credly.com/otherembed/2108710/4/0/0/0" width="100%" height="200px"></iframe>
+        </div>
+</section>

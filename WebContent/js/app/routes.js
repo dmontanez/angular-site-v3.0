@@ -7,11 +7,6 @@ angular.module('app')
 
                 //Route varibles
                 var home,
-                    education,
-                    experience,
-                    skills,
-                    projects,
-                    other,
                     resume,
                     aboutMe,
                     contact,
@@ -21,11 +16,6 @@ angular.module('app')
                     _carouselTemplate;
 
                     home                = 'templates/states/home/';
-                    education           = 'templates/states/education/';
-                    experience          = 'templates/states/experience/';
-                    skills              = 'templates/states/skills/';
-                    projects            = 'templates/states/projects/';
-                    other               = 'templates/states/other/';
                     resume              = 'templates/states/resume/';
                     aboutMe             = 'templates/states/about-me/';
                     contact             = 'templates/states/contact/';
@@ -53,6 +43,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@education': {
@@ -67,6 +58,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = companies;
+                                    $scope.name = 'experience';
                                 }
                             },
                             'panel-template@experience': {
@@ -80,11 +72,12 @@ angular.module('app')
                             '': {
                                 template: _carouselTemplate,
                                 controller: function($scope) {
-                                    $scope.data = schools;
+                                    $scope.data = skills;
+                                    $scope.name = 'skills';
                                 }
                             },
                             'panel-template@skills': {
-                                templateUrl: carouselPart + 'ed-panel/index.html'
+                                templateUrl: carouselPart + 'sk-panel/index.html'
                             }
                         }
                     })
@@ -95,6 +88,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@projects': {
@@ -109,6 +103,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@other': {
@@ -123,6 +118,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@resume': {
@@ -137,6 +133,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@about-me': {
@@ -151,6 +148,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@education': {
@@ -165,6 +163,7 @@ angular.module('app')
                                 template: _carouselTemplate,
                                 controller: function($scope) {
                                     $scope.data = schools;
+                                    $scope.name = 'education';
                                 }
                             },
                             'panel-template@social-profiles': {
