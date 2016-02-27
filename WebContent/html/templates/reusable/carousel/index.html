@@ -6,8 +6,10 @@
     </ol>
     
     <!-- Wrapper for slides -->
+    <div class="panel-heading panel-head">
+        <h3><strong>{{name | uppercase}}</strong></h3>
+    </div>
     <div class="carousel-inner" role="listbox">
-        
         <div ng-repeat="elem in data" class="item" ng-class='{active:$first}'>
             <div class="content-panel">
                 <div class="panel panel-default center-content">
