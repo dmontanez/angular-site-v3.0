@@ -270,3 +270,83 @@ var activities = [
                     'and generates a tournament schedule to be run "Round Robin" style.'
         }
     ];
+
+var others = [
+    {
+        name: 'Communication',
+        acts: [
+            'As a Logistics Engineer at CSC; Monthly interaction with the PMO, and Foreign Customer, providing a summary of analysis done as part of job requirement ' +
+            'and subsequent recommendations for program improvement: Skilled in professional presentation and delivery of information.'
+        ]
+    },
+    {
+        name: 'Leadership',
+        acts: [
+            'As a Logistics Engineer at CSC; Implemented a Trouble Ticket Review Board which provided input for multiple facets of program organization.',
+            'Chair of Program, Integrated Product Team, tasked with documenting Business Process Model Flowcharts for all program activities.'
+        ],
+    },
+    {
+        name: 'Activities',
+        acts: [
+            'Four year letter winner for CSUB’s Division I Wrestling Team (2006 – 2010)',
+            'Assistant Wrestling Coach for Cathedral Catholic High School (2013 – Present)'
+        ]
+    }
+];
+    
+var aboutQuotes = [
+    {
+        author: 'Anthony Hopkins',
+        text: '"My philosophy is: It\'s none of my business what people say of me and think of me. ' + 
+                'I am what I am and I do what I do. I expect nothing and accept everything. And it makes life so much easier."'
+    },
+    {
+        author: 'Michael Scott',
+        text: '"That\'s what she said."'
+    }
+];
+    
+var aboutImages = [
+    {
+        descr: 'My first year, wedding anniversarry on Cornodo Beach.',
+        imgURL: "../images/about-pics/1-year-anni.jpg"
+    },
+    {
+        descr: 'All of my pups, from right-to-left: Scrappy, Sophie, Chica.',
+        imgURL: "../images/about-pics/pups.jpg"
+    },
+    {
+        descr: 'Competing in a wrestling match in college.',
+        imgURL: "../images/about-pics/wrestling.jpg"
+    },
+    {
+        descr: 'Custom mini bar that I designed and built myself.',
+        imgURL: "../images/about-pics/mini-bar.jpg"
+    },
+    {
+        descr: 'Stock photo of my motorcycle; Triumph Thruxton.',
+        imgURL: "../images/about-pics/thruxton.jpg"
+    },
+    {
+        descr: 'Getting ready for a ride with the wife!',
+        imgURL: "../images/about-pics/bike-ride.png"
+    },
+    {
+        descr: 'Just a picture of my dog, Sophie being playful.',
+        imgURL: "../images/about-pics/soph-play.png"
+    },
+    {
+        descr: 'One of my favorite things to do, walk on the beach.',
+        imgURL: "../images/about-pics/beach-hike.png"
+    }
+];
+
+var aboutTemp = [
+    {
+        placeHolder: 'pics'
+    },
+    {
+        placeHolder: 'quotes'
+    }
+];

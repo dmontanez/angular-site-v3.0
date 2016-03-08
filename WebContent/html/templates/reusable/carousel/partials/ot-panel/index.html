@@ -1,0 +1,12 @@
+<section ng-show="elem.name.length">
+    <div class="panel-heading">
+        <h4 class="panel-title">{{elem.name}}</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="act in elem.acts">
+                {{act}}
+            </li>
+        </ul>
+    </div>
+</section>

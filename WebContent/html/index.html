@@ -38,6 +38,7 @@
         <script src="../js/directives/carousel.js"></script>
         <script src="../js/directives/is-active.js"></script>
         <script src="../js/directives/brand-active.js"></script>
+        <script src="../js/directives/about-click.js"></script>
         
         <!-- Filters -->
         <script src="../js/filters/phone-number.js"></script>
@@ -58,6 +59,18 @@
             
             <!-- Inject Page Content Here -->
             <div class="full-width state-slideup" ui-view></div>
+            
+            <!-- Page modals -->
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <center>
+                            <img class="about-pic-modal img-responsive" data-toggle="modal" data-target=".bs-example-modal-lg"/>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
     </body>

@@ -17,7 +17,6 @@ angular.module('app')
 
                     home                = 'templates/states/home/';
                     resume              = 'templates/states/resume/';
-                    aboutMe             = 'templates/states/about-me/';
                     contact             = 'templates/states/contact/';
                     socialProfiles      = 'templates/states/social-profiles/';
                     carousel            = 'templates/reusable/carousel/';
@@ -102,12 +101,12 @@ angular.module('app')
                             '': {
                                 template: _carouselTemplate,
                                 controller: function($scope) {
-                                    $scope.data = schools;
+                                    $scope.data = others;
                                     $scope.name = 'other';
                                 }
                             },
                             'panel-template@other': {
-                                templateUrl: carouselPart + 'ed-panel/index.html'
+                                templateUrl: carouselPart + 'ot-panel/index.html'
                             }
                         }
                     })
@@ -115,14 +114,11 @@ angular.module('app')
                         url: '/resume',
                         views: {
                             '': {
-                                template: _carouselTemplate,
+                                templateUrl: resume + 'index.html',
                                 controller: function($scope) {
-                                    $scope.data = schools;
+                                    $scope.obj = '../resources/resume.pdf';
                                     $scope.name = 'resume';
                                 }
-                            },
-                            'panel-template@resume': {
-                                templateUrl: carouselPart + 'ed-panel/index.html'
                             }
                         }
                     })
@@ -132,12 +128,14 @@ angular.module('app')
                             '': {
                                 template: _carouselTemplate,
                                 controller: function($scope) {
-                                    $scope.data = schools;
+                                    $scope.data = aboutTemp;
                                     $scope.name = 'about-me';
+                                    $scope.images = aboutImages;
+                                    $scope.quotes = aboutQuotes;
                                 }
                             },
                             'panel-template@about-me': {
-                                templateUrl: carouselPart + 'ed-panel/index.html'
+                                templateUrl: carouselPart + 'am-panel/index.html'
                             }
                         }
                     })
