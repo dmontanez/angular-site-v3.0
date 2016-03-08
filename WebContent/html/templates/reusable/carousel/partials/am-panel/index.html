@@ -1,0 +1,26 @@
+<section ng-show="{{$index}} === 0">
+    <div class="panel-heading">
+        <h4 calss="panel-title">Pictures</h4>
+    </div>
+    <div class="row about-row">
+        <div class="about-pic col-lg-3 col-md-4 col-xs-6"  ng-repeat="image in images">
+            <a class="thumbnail" href="#">
+                <img about-click class="img-responsive" ng-src="{{image.imgURL}}" alt="" data-toggle="modal" data-target=".bs-example-modal-lg">
+            </a>
+            <p class="about-text">{{image.descr}}</p>
+        </div>
+    </div>
+</section>
+<section  ng-show="{{$index}} === 1">
+    <div class="panel-heading">
+        <h4 calss="panel-title">Quotes</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-8 thumb" ng-repeat="quote in quotes">
+                <h3>{{quote.text}}</h3>
+                <h5>- {{quote.author}}</h5>
+            </div>
+        </div>
+    </div>
+</section>

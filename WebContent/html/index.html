@@ -12,6 +12,7 @@
         <!-- Angular 1.4.7 & UI-Router -->
         <script src="../assets/angular/angular-v1.5.js"></script>
         <script src="../assets/angular/angular-ui-router-v0.2.18.js"></script>
+        <script src="../assets/angular/angular-animate-v1.5.js"></script>
 
         <!-- Bootstrap -->
             <!-- Latest compiled and minified CSS -->
@@ -26,13 +27,21 @@
         <!-- Angular App -->
         <script src="../js/app/app.js"></script>
         <script src="../js/app/routes.js"></script>
+        <script src="../js/app/stub_data.js"></script>
+        <script src="../js/app/run.js"></script>
 
         <!-- Controllers -->
-        <!-- <script src="../js/controllers/INSERT"></script> -->
 
         <!-- Directives -->
         <script src="../js/directives/navigation.js"></script>
         <script src="../js/directives/page-header.js"></script>
+        <script src="../js/directives/carousel.js"></script>
+        <script src="../js/directives/is-active.js"></script>
+        <script src="../js/directives/brand-active.js"></script>
+        <script src="../js/directives/about-click.js"></script>
+        
+        <!-- Filters -->
+        <script src="../js/filters/phone-number.js"></script>
         
         <!-- Custom Theme CSS -->
         <link rel="stylesheet" href="../css/style.css">
@@ -40,7 +49,7 @@
     </head>
     <body ng-app='app'>
         
-        <div class="container-fluid full-width">
+        <div class="container-fluid full-width page-container">
             
             <!-- Page Header -->
             <header class="full-width"></header>
@@ -49,7 +58,19 @@
             <navigation class="full-width"></navigation>
             
             <!-- Inject Page Content Here -->
-            <div  class="full-width" ui-view></div>
+            <div class="full-width state-slideup" ui-view></div>
+            
+            <!-- Page modals -->
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <center>
+                            <img class="about-pic-modal img-responsive" data-toggle="modal" data-target=".bs-example-modal-lg"/>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
     </body>

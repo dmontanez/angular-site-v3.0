@@ -1,0 +1,12 @@
+<section>
+    <div class="panel-heading">
+        <img ng-src={{elem.images[0]}} class="comp-logo" />
+        <h4 class="panel-title"><b>{{elem.name}}</b></h4>
+        <h5>{{elem.title}}</h5>
+        <div ng-hide="{{elem.isCurrent}}"><h6>{{elem.start | date}} - {{elem.end | date}}</h6></div>
+        <div ng-show="{{elem.isCurrent}}"><h6>{{elem.start | date}} - Present</h6></div>
+    </div>
+    <div class="panel-body">
+        <em><small>{{elem.descr}}</small></em>
+    </div>
+</section>
