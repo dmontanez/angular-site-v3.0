@@ -31,7 +31,11 @@ angular.module('app')
                         url: '/home',
                         views: {
                             '': {
-                                templateUrl: home + 'index.html'
+                                templateUrl: home + 'index.html',
+                                controller: function($scope) {
+                                    $scope.data = profile;
+                                    $scope.name = 'home';
+                                }
                             }
                         }
                     })
@@ -143,14 +147,11 @@ angular.module('app')
                         url: '/contact',
                         views: {
                             '': {
-                                template: _carouselTemplate,
+                                templateUrl: contact + 'index.html',
                                 controller: function($scope) {
-                                    $scope.data = schools;
+                                    $scope.data = profile;
                                     $scope.name = 'contact';
                                 }
-                            },
-                            'panel-template@education': {
-                                templateUrl: carouselPart + 'ed-panel/index.html'
                             }
                         }
                     })

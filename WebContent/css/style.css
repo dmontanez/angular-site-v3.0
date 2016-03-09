@@ -7,15 +7,22 @@
   }
 }
 @media screen and (max-width: 650px) {
-  .about-text {
-    font-size: 15px;
+  p.about-text {
+    font-size: 11px;
   }
 }
 .about-pic {
   padding-bottom: 50px;
+  min-width: 25px;
+  max-width: 300px;
 }
 .about-pic-modal {
   padding: 20px 20px 20px 20px;
+}
+.about-row {
+  text-align: center;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 .frame-to-fit {
   width: 100%;
@@ -109,8 +116,9 @@ html {
   top: 120px;
   left: 0;
   right: 0;
-  height: 65%;
+  height: 86%;
   z-index: -999;
+  background-image: linear-gradient(to bottom, #f5f5f5 0, #e8e8e8 100%);
 }
 .state-slideup.ng-enter,
 .state-slideup.ng-leave {
