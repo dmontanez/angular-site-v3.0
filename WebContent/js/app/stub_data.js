@@ -3,13 +3,33 @@ var profile = {
         'title': 'Software Engineer',
         'contact':
             {
-                'phone': 6618694325,
-                'email': 'dmontanez@alumni.psu.edu'
-            },
-        'address':
-            {
-                'city': 'San Diego',
-                'state': 'CA'
+                phones: [
+                    {
+                        type: 'Cell',
+                        number: 6618694325
+                    }
+                ],
+                emails: [
+                    {
+                        type: 'Preffered',
+                        address: 'dmontanez@alumni.psu.edu'
+                    },
+                    {
+                        type: 'Primary',
+                        address: 'dmontanez86@gmail.com'
+                    },
+                    {
+                        type: 'Secondary',
+                        address: 'psu.djm496@gmail.com'
+                    }
+                ],
+                locations: [
+                    {
+                        type: 'Home',
+                        city: 'San Diego',
+                        state: 'CA'
+                    }
+                ]
             }
     };
 
