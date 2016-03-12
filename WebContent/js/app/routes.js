@@ -24,7 +24,7 @@ angular.module('app')
                     _carouselTemplate   = '<carousel></carousel>';
 
 
-                //$urlRouterProvider.otherwise('/home');
+                $urlRouterProvider.otherwise('/home');
 
                 $stateProvider
                     .state('home', {

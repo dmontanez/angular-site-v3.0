@@ -227,7 +227,7 @@ var skills = [
 var activities = [
         {
             name: 'Website',
-            link: "https://github.com/dmontanez/myAngularSite",
+            link: "https://github.com/dmontanez/angular-site-v3.0",
             images: [
                 "../images/blue_hex_1.png"
             ],
